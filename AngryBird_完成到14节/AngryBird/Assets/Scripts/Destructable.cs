@@ -44,10 +44,6 @@ public class Destructable : MonoBehaviour//控制物体的销毁
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
