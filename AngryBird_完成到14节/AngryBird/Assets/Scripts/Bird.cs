@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public enum BirdState
 {
     Waiting,
     Beforeshoot,
-    AfterShoot
+    AfterShoot,
+    WaitToDie
 }
 public class Bird : MonoBehaviour
 {
@@ -39,6 +41,9 @@ public class Bird : MonoBehaviour
                 MoveControl();
                 break;
             case BirdState.AfterShoot:
+                StopControl();
+                break;
+            case BirdState.WaitToDie:
                 break;
             default:
                 break;
@@ -97,5 +102,27 @@ public class Bird : MonoBehaviour
         rgd.velocity = (Slingshot.Instance.getCenterPositon() - transform.position).normalized * flyspeed;//获取方向向量，乘速度大小
 
         state = BirdState.AfterShoot;//飞出后鼠标不可控制
+    }
+
+    public void GoStage(Vector3 position)//控制小鸟的上场状态,并提供小鸟位置
+    {
+        state = BirdState.Beforeshoot;
+        transform.position = position;
+    }
+
+    private void StopControl()//
+    {
+        if (rgd.velocity.magnitude < 0.1f)//若小鸟速度小于一定值
+        {
+            state = BirdState.WaitToDie;//改变现在小鸟状态，准备销毁
+            Invoke("LoadNextBird", 1f);
+        }
+    }
+
+    private void LoadNextBird()//加载下一只小鸟
+    {
+        Destroy(gameObject);//销毁小鸟
+        GameObject.Instantiate(Resources.Load("Boom1"), transform.position, Quaternion.identity);
+        GameManager.Instance.LoadNextBird();
     }
 }

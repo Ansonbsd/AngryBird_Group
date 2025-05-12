@@ -3224,7 +3224,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pig1_
+      name: Pig1_2
       rect:
         serializedVersion: 2
         x: 545
@@ -3952,8 +3952,8 @@ TextureImporter:
       Boom5: -394657485
       Boom6: -2074278639
       Boom7: 161194484
-      Pig1_: 341296964
       Pig1_1: 420769732
+      Pig1_2: 341296964
       Pig2_1: -838379831
       Pig2_2: -1896182529
       Pig2_3: -150916129

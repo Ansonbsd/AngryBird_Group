@@ -34,7 +34,7 @@ public class Destructiable : MonoBehaviour//控制物体的销毁
         }
        
     }
-    private void Dead()
+    public virtual void Dead()
     {
         GameObject.Instantiate(boomPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);

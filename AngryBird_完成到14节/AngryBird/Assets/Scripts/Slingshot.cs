@@ -17,6 +17,12 @@ public class Slingshot : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        LeftLineRenderer = transform.Find("LeftLineRenderer").GetComponent<LineRenderer>();
+        RightLineRenderer = transform.Find("RightLineRenderer").GetComponent<LineRenderer>();
+
+        LeftPoint = transform.Find("LeftPoint");
+        RightPoint = transform.Find("RightPoint");
+        Centerpoint = transform.Find("CenterPoint");
     }
 
     private bool isDrawing;//皮筋是否需要绘制？
@@ -27,12 +33,7 @@ public class Slingshot : MonoBehaviour
 
     void Start()
     {   //用函数返回皮筋的位置，得到皮筋组件
-        LeftLineRenderer = transform.Find("LeftLineRenderer").GetComponent<LineRenderer>();
-        RightLineRenderer = transform.Find("RightLineRenderer").GetComponent<LineRenderer>();
-
-        LeftPoint = transform.Find("LeftPoint");
-        RightPoint = transform.Find("RightPoint");
-        Centerpoint = transform.Find("CenterPoint");
+       
 
         HideLine();
     }
