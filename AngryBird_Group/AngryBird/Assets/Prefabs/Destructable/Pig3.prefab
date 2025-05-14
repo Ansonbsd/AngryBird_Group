@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   injuredSpriteLIst: []
+  score: 3000
 --- !u!58 &1708287189682943148
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -180,3 +181,4 @@ MonoBehaviour:
   maxHP: 200
   injuredSpriteLIst:
   - {fileID: 282412295, guid: cf2b7c886989b2a4190d1e60286af61b, type: 3}
+  score: 10000

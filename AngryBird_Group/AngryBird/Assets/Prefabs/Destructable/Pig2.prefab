@@ -168,3 +168,4 @@ MonoBehaviour:
   - {fileID: -1896182529, guid: 059a2458a83e2a043b642fd152f6a641, type: 3}
   - {fileID: -150916129, guid: 059a2458a83e2a043b642fd152f6a641, type: 3}
   - {fileID: -371889127, guid: 059a2458a83e2a043b642fd152f6a641, type: 3}
+  score: 5000

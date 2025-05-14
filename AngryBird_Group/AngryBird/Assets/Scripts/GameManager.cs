@@ -3,15 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour//¼ì²éÐ¡ÄñºÍÖí¸öÊý£¬¾ö¶¨ÊÇ·ñ½áÊøÓÎÏ·
+public class GameManager : MonoBehaviour//ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·
 {   public static GameManager Instance { get; private set; }
 
-    private Bird[] birdList;//¼ÇÂ¼Ð¡ÄñÊýÁ¿£¬·½±ãÅÐ¶¨
+    private Bird[] birdList;//ï¿½ï¿½Â¼Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
 
     private int pigTotalCount;
-    private int pigDeadCount;//ËÀÍöÖíÊýÁ¿
+    private int pigDeadCount;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     private int index = -1;
+
+    private FollowTarget cameraFollowTarget;
     private void Awake()
     {
         Instance = this;
@@ -19,8 +21,10 @@ public class GameManager : MonoBehaviour//¼ì²éÐ¡ÄñºÍÖí¸öÊý£¬¾ö¶¨ÊÇ·ñ½áÊøÓÎÏ·
     }
     void Start()
     {
-        birdList = FindObjectsByType<Bird>(FindObjectsSortMode.None);//ÕÒµ½Ä¿Ç°ËùÓÐµÄÐ¡Äñ
+        birdList = FindObjectsByType<Bird>(FindObjectsSortMode.None);//ï¿½Òµï¿½Ä¿Ç°ï¿½ï¿½ï¿½Ðµï¿½Ð¡ï¿½ï¿½
         pigTotalCount = (FindObjectsByType<Pig>(FindObjectsSortMode.None)).Length;
+        cameraFollowTarget = Camera.main.GetComponent<FollowTarget>();
+
         LoadNextBird();
     }
 
@@ -37,14 +41,15 @@ public class GameManager : MonoBehaviour//¼ì²éÐ¡ÄñºÍÖí¸öÊý£¬¾ö¶¨ÊÇ·ñ½áÊøÓÎÏ·
 
     public void LoadNextBird()
     {
-        index++;//¼ÓÔØÏÂÒ»Ö»Ð¡Äñ
-        if (index >= birdList.Length)//Ã»ÓÐÐ¡ÄñÁË£¬½áÊøÓÎÏ·
+        index++;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ö»Ð¡ï¿½ï¿½
+        if (index >= birdList.Length)//Ã»ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·
         {
             GameEnd();
         }
-        else//Èô»¹ÓÐÐ¡Äñ
+        else//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½
         {
-            birdList[index].GoStage(Slingshot.Instance.getCenterPositon());//ÈÃÏÂÒ»Ö»Ð¡Äñ½øÈëµ¯¹­
+            birdList[index].GoStage(Slingshot.Instance.getCenterPositon());//ï¿½ï¿½ï¿½ï¿½Ò»Ö»Ð¡ï¿½ï¿½ï¿½ï¿½ëµ¯ï¿½ï¿½
+            cameraFollowTarget.SetTarget(birdList[index].transform);
         }
         }
     public void OnPigDead()
