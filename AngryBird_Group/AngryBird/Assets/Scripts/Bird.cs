@@ -20,7 +20,10 @@ public class Bird : MonoBehaviour
 
     public float flyspeed = 10;//小鸟飞行速度
 
-    private Rigidbody2D rgd;
+    protected Rigidbody2D rgd;
+
+    private bool isFlying = true;
+    private bool isHaveUsedSkill = false;
 
 
     void Start()
@@ -42,6 +45,7 @@ public class Bird : MonoBehaviour
                 break;
             case BirdState.AfterShoot:
                 StopControl();
+                SkillControl();//技能控制
                 break;
             case BirdState.WaitToDie:
                 break;
@@ -58,6 +62,7 @@ public class Bird : MonoBehaviour
         {
             isMouseDown = true;
             Slingshot.Instance.StartDraw(transform);
+            AudioManager.Instance.PlayBirdSelect(transform.position);
         }
     }
 
@@ -102,6 +107,8 @@ public class Bird : MonoBehaviour
         rgd.velocity = (Slingshot.Instance.getCenterPositon() - transform.position).normalized * flyspeed;//获取方向向量，乘速度大小
 
         state = BirdState.AfterShoot;//飞出后鼠标不可控制
+
+        AudioManager.Instance.PlayBirdFlying(transform.position);
     }
 
     public void GoStage(Vector3 position)//控制小鸟的上场状态,并提供小鸟位置
@@ -119,10 +126,46 @@ public class Bird : MonoBehaviour
         }
     }
 
+    private void SkillControl()
+    {
+        if (isHaveUsedSkill) return;
+       
+        if (isFlying= true && Input.GetMouseButtonDown(0))
+        {
+            FlyingSkill();
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            isHaveUsedSkill = true;
+            FullTimeSkill();
+        }
+    }
+
+    protected virtual void FlyingSkill()
+    {
+       
+       
+    }
+    
+    protected void FullTimeSkill()
+    {
+        
+    }
     private void LoadNextBird()//加载下一只小鸟
     {
         Destroy(gameObject);//销毁小鸟
         GameObject.Instantiate(Resources.Load("Boom1"), transform.position, Quaternion.identity);
         GameManager.Instance.LoadNextBird();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isFlying = true;
+        if (state == BirdState.AfterShoot && collision.relativeVelocity.magnitude > 5)//播放条件：正在飞行，速度大于5
+        
+        {
+            AudioManager.Instance.PlayBirdCollision(transform.position);
+        }
     }
 }

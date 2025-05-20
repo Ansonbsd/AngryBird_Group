@@ -2174,7 +2174,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BIRDS_1_107
+      name: BigMouseBird
       rect:
         serializedVersion: 2
         x: 816
@@ -2825,11 +2825,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BIRDS_1_138
+      name: BlackBird
       rect:
         serializedVersion: 2
-        x: 482
-        y: 102
+        x: 485
+        y: 100
         width: 61
         height: 81
       alignment: 0
@@ -2930,7 +2930,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BIRDS_1_143
+      name: YellowBird
       rect:
         serializedVersion: 2
         x: 634
@@ -3787,7 +3787,6 @@ TextureImporter:
       BIRDS_1_103: 1348395776
       BIRDS_1_105: -730157844
       BIRDS_1_106: -120521306
-      BIRDS_1_107: -1209388616
       BIRDS_1_108: 743403311
       BIRDS_1_109: -731983295
       BIRDS_1_11: 1934188506
@@ -3819,13 +3818,11 @@ TextureImporter:
       BIRDS_1_134: -178178812
       BIRDS_1_135: 1661915438
       BIRDS_1_136: 585739592
-      BIRDS_1_138: -575616833
       BIRDS_1_139: 788611771
       BIRDS_1_14: 781442499
       BIRDS_1_140: 870074738
       BIRDS_1_141: -1782583998
       BIRDS_1_142: 875474477
-      BIRDS_1_143: 1254127371
       BIRDS_1_144: -239845777
       BIRDS_1_145: -2026587247
       BIRDS_1_146: 1030161279
@@ -3944,7 +3941,9 @@ TextureImporter:
       BIRDS_1_95: 287515797
       BIRDS_1_97: 1814947295
       BIRDS_1_99: -660122193
+      BigMouseBird: -1209388616
       Birds: 2135622421
+      BlackBird: -575616833
       Boom1: -496857467
       Boom2: 603352903
       Boom3: 858440686
@@ -3963,6 +3962,7 @@ TextureImporter:
       RedBird: 1893957804
       Slingshot_left: -1730576539
       Slingshot_right: -1969859181
+      YellowBird: 1254127371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

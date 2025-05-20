@@ -26,17 +26,32 @@ public class Destructable : MonoBehaviour//控制物体的销毁
             Dead(); return;
         }
         else
-        {//换图片
+        {//换图片,播放音乐
+            Sprite beforeSprite = spriteRenderer.sprite;
             int index = (int)((maxHP - currentHP) / (maxHP / (injuredSpriteLIst.Count + 1.0f))) - 1;//第几张图片
             if (index != -1)
             {
                 spriteRenderer.sprite = injuredSpriteLIst[index];
             }
+            if (beforeSprite!= spriteRenderer.sprite)
+            {
+                PlayAudioCollision();//若prefabs发生改变，则播放音效
+            }
         }
 
     }
+    protected virtual void PlayAudioCollision()
+    {
+        AudioManager.Instance.PlayWoodCollision(transform.position);
+
+    }
+    protected virtual void PlayAudioDestroyed()
+    {
+        AudioManager.Instance.PlayWoodDestroyed(transform.position);
+    }
     public virtual void Dead()
     {
+        PlayAudioDestroyed();
         GameObject.Instantiate(boomPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
