@@ -3,7 +3,7 @@ guid: cf5d634a08c57f74aa2dfda190144a36
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -77,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -89,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1589,9 +1591,9 @@ TextureImporter:
       name: BIRDS_1_76
       rect:
         serializedVersion: 2
-        x: 860
-        y: 436
-        width: 61
+        x: 857
+        y: 437
+        width: 64
         height: 81
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1611,7 +1613,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 923
-        y: 436
+        y: 435
         width: 61
         height: 81
       alignment: 0
@@ -2828,13 +2830,13 @@ TextureImporter:
       name: BlackBird
       rect:
         serializedVersion: 2
-        x: 485
+        x: 477
         y: 100
-        width: 61
-        height: 81
+        width: 68
+        height: 84
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 1, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0

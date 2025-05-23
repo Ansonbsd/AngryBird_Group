@@ -1,29 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
+using UnityEngine.EventSystems;
 
 public enum BirdState
 {
     Waiting,
-    Beforeshoot,
+    BeforeShoot,
     AfterShoot,
     WaitToDie
 }
 public class Bird : MonoBehaviour
 {
-    public BirdState state = BirdState.Beforeshoot;
-    // Start is called before the first frame update
+    public BirdState state = BirdState.BeforeShoot;
+    //等待  发射前  发射后
+
     private bool isMouseDown = false;
+    public float maxDistance = 2.45f;
 
-    public float maxDistance = 3.0f;
-
-    public float flyspeed = 10;//小鸟飞行速度
+    public float flySpeed = 13;
 
     protected Rigidbody2D rgd;
 
-    private bool isFlying = true;
-    private bool isHaveUsedSkill = false;
+    public bool isFlying = true;
+    public bool isHaveUsedSkill = false;
 
 
     void Start()
@@ -36,29 +36,32 @@ public class Bird : MonoBehaviour
     void Update()
     {
         switch (state)
-        {   
-            
+        {
             case BirdState.Waiting:
+                WaitControl();
                 break;
-            case BirdState.Beforeshoot:
+            case BirdState.BeforeShoot:
                 MoveControl();
                 break;
             case BirdState.AfterShoot:
                 StopControl();
-                SkillControl();//技能控制
+                SkillControl();
                 break;
             case BirdState.WaitToDie:
                 break;
             default:
                 break;
         }
-  
+
     }
-    //OnMouseDown和OnMouseUp
+    private void WaitControl()
+    {
+
+    }
 
     private void OnMouseDown()
     {
-        if (state == BirdState.Beforeshoot)
+        if (state == BirdState.BeforeShoot && EventSystem.current.IsPointerOverGameObject() == false)
         {
             isMouseDown = true;
             Slingshot.Instance.StartDraw(transform);
@@ -68,7 +71,7 @@ public class Bird : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (state == BirdState.Beforeshoot)
+        if (state == BirdState.BeforeShoot && EventSystem.current.IsPointerOverGameObject() == false)
         {
             isMouseDown = false;
             Slingshot.Instance.EndDraw();
@@ -87,41 +90,41 @@ public class Bird : MonoBehaviour
     private Vector3 GetMousePosition()
     {
         Vector3 centerPosition = Slingshot.Instance.getCenterPositon();
-        Vector3 mp= Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 mouseDir = mp - centerPosition;
+        Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mp.z = 0;
+        Vector3 mouseDir = mp - centerPosition;
 
-        float distance = mouseDir.magnitude;//鼠标点与中心点的距离
+        float distance = mouseDir.magnitude;
 
         if (distance > maxDistance)
         {
-            mp =mouseDir.normalized * maxDistance + centerPosition;//将鼠标位置限定在范围内
+            mp = mouseDir.normalized * maxDistance + centerPosition;
         }
+
         return mp;
     }
 
-    private void Fly()//控制小鸟飞行
+    private void Fly()
     {
-        rgd.bodyType = RigidbodyType2D.Dynamic;//设置刚体
+        rgd.bodyType = RigidbodyType2D.Dynamic;
 
-        rgd.velocity = (Slingshot.Instance.getCenterPositon() - transform.position).normalized * flyspeed;//获取方向向量，乘速度大小
-
-        state = BirdState.AfterShoot;//飞出后鼠标不可控制
+        rgd.velocity = (Slingshot.Instance.getCenterPositon() - transform.position).normalized * flySpeed;
+        state = BirdState.AfterShoot;
 
         AudioManager.Instance.PlayBirdFlying(transform.position);
     }
 
-    public void GoStage(Vector3 position)//控制小鸟的上场状态,并提供小鸟位置
+    public void GoStage(Vector3 position)
     {
-        state = BirdState.Beforeshoot;
+        state = BirdState.BeforeShoot;
         transform.position = position;
     }
 
-    private void StopControl()//
+    private void StopControl()
     {
-        if (rgd.velocity.magnitude < 0.1f)//若小鸟速度小于一定值
+        if (rgd.velocity.magnitude < 0.1f)
         {
-            state = BirdState.WaitToDie;//改变现在小鸟状态，准备销毁
+            state = BirdState.WaitToDie;
             Invoke("LoadNextBird", 1f);
         }
     }
@@ -129,9 +132,11 @@ public class Bird : MonoBehaviour
     private void SkillControl()
     {
         if (isHaveUsedSkill) return;
-       
-        if (isFlying= true && Input.GetMouseButtonDown(0))
+
+
+        if (isFlying == true && Input.GetMouseButtonDown(0))
         {
+            isHaveUsedSkill = true;
             FlyingSkill();
         }
 
@@ -141,31 +146,31 @@ public class Bird : MonoBehaviour
             FullTimeSkill();
         }
     }
-
     protected virtual void FlyingSkill()
     {
-       
-       
     }
-    
-    protected void FullTimeSkill()
+    protected virtual void FullTimeSkill()
     {
-        
     }
-    private void LoadNextBird()//加载下一只小鸟
+
+    protected void LoadNextBird()
     {
-        Destroy(gameObject);//销毁小鸟
+        Destroy(gameObject);
         GameObject.Instantiate(Resources.Load("Boom1"), transform.position, Quaternion.identity);
         GameManager.Instance.LoadNextBird();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        isFlying = true;
-        if (state == BirdState.AfterShoot && collision.relativeVelocity.magnitude > 5)//播放条件：正在飞行，速度大于5
-        
+        if (state == BirdState.AfterShoot)
+        {
+            isFlying = false;
+        }
+
+        if (state == BirdState.AfterShoot && collision.relativeVelocity.magnitude > 5)
         {
             AudioManager.Instance.PlayBirdCollision(transform.position);
         }
     }
 }
+
