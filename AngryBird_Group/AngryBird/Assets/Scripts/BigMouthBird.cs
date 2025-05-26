@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BigMouthBird :Bird
+public class BigMouthBird : Bird
 {
+    
     protected override void FlyingSkill()
     {
         Vector2 velocity = rgd.velocity;
@@ -13,5 +14,6 @@ public class BigMouthBird :Bird
         Vector3 scale = transform.localScale;
         scale.x = -scale.x;
         transform.localScale = scale;
+
     }
 }

@@ -21,9 +21,8 @@ public class GameManager : MonoBehaviour//���С���������
     }
     void Start()
     {
-        // 修改查找方法，包含非激活的Bird
-        birdList = FindObjectsByType<Bird>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-        pigTotalCount = FindObjectsByType<Pig>(FindObjectsInactive.Include, FindObjectsSortMode.None).Length;
+        birdList = FindObjectsByType<Bird>(FindObjectsSortMode.None);//�ҵ�Ŀǰ���е�С��
+        pigTotalCount = (FindObjectsByType<Pig>(FindObjectsSortMode.None)).Length;
         cameraFollowTarget = Camera.main.GetComponent<FollowTarget>();
 
         LoadNextBird();
