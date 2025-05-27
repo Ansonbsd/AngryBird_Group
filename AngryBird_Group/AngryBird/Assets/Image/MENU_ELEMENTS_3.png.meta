@@ -93,18 +93,282 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MENU_ELEMENTS_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 531
+        width: 161
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4321f956f86214cb8d0d33333eebde
+      internalID: -1370413813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_ELEMENTS_3_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 604
+        width: 315
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b303f6ed9445dfa4294786e636a1757b
+      internalID: 292533343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_ELEMENTS_3_2
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 681
+        width: 260
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3291d2592d6fb4f85f3b577f7e1703
+      internalID: -1925928799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_ELEMENTS_3_3
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 589
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634a2d94c3729ea4aa5a3d8c072678f6
+      internalID: 2114855936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_ELEMENTS_3_4
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 573
+        width: 104
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770cab3bd3407924dafa3d1a1addb6a3
+      internalID: -978041514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_ELEMENTS_3_5
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 581
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39fb96159506a6d4c88759c0294c464f
+      internalID: 1503864320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_ELEMENTS_3_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 578
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b93d961627d8524e923726a0e80707c
+      internalID: -2119483929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarBg
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 229
+        width: 315
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0bbe6dcfbffa14bab4fec4001348a6
+      internalID: 1506041635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star1
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 329
+        width: 201
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d95d2874407664399baad28fdb1808
+      internalID: -873717685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star3
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 336
+        width: 196
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148f4cdd7d313df4586fedbe18ec053f
+      internalID: 950413546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 230
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a17307c631f73b4c8159b0e6bca7809
+      internalID: -1634983726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_ELEMENTS_3_11
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 189
+        width: 363
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1bd07083be6f547b016f29dde4b706
+      internalID: 1646679595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2230377a9c355834aaa76e148a621a64
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MENU_ELEMENTS_3_0: -1370413813
+      MENU_ELEMENTS_3_1: 292533343
+      MENU_ELEMENTS_3_11: 1646679595
+      MENU_ELEMENTS_3_2: -1925928799
+      MENU_ELEMENTS_3_3: 2114855936
+      MENU_ELEMENTS_3_4: -978041514
+      MENU_ELEMENTS_3_5: 1503864320
+      MENU_ELEMENTS_3_6: -2119483929
+      Star1: -873717685
+      Star2: -1634983726
+      Star3: 950413546
+      StarBg: 1506041635
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
