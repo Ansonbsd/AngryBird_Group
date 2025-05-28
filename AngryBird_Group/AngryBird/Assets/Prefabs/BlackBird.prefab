@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9190232622537269824
+--- !u!1 &5824580121175052359
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6229380014640019077}
-  - component: {fileID: 8264646101809696675}
-  - component: {fileID: 4265778475674645009}
-  - component: {fileID: 5803604135413826707}
-  - component: {fileID: 9183892435797250246}
-  - component: {fileID: 1711502728583107614}
+  - component: {fileID: 327919440039116664}
+  - component: {fileID: 3662171921174669568}
+  - component: {fileID: 8674145702196507589}
+  - component: {fileID: 6538554382665015407}
+  - component: {fileID: 378498334156853260}
+  - component: {fileID: 8435318956707353139}
   m_Layer: 0
   m_Name: BlackBird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &6229380014640019077
+  m_IsActive: 1
+--- !u!4 &327919440039116664
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9190232622537269824}
+  m_GameObject: {fileID: 5824580121175052359}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.04, y: 1.85, z: 0}
-  m_LocalScale: {x: 1.4888972, y: 1.6214358, z: 2.0853825}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -26.79, y: 1.8, z: 0}
+  m_LocalScale: {x: 0.709816, y: 0.68313056, z: 1.0426912}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8264646101809696675
+--- !u!212 &3662171921174669568
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9190232622537269824}
+  m_GameObject: {fileID: 5824580121175052359}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -53,6 +53,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -88,13 +90,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &4265778475674645009
+--- !u!58 &8674145702196507589
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9190232622537269824}
+  m_GameObject: {fileID: 5824580121175052359}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -122,16 +124,16 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.010093056, y: -0.04761793}
-  m_Radius: 0.36433724
---- !u!50 &5803604135413826707
+  m_Offset: {x: 0.030186052, y: -0.093108416}
+  m_Radius: 0.290814
+--- !u!50 &6538554382665015407
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9190232622537269824}
+  m_GameObject: {fileID: 5824580121175052359}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -151,14 +153,14 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!96 &9183892435797250246
+--- !u!96 &378498334156853260
 TrailRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9190232622537269824}
+  m_GameObject: {fileID: 5824580121175052359}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -169,6 +171,8 @@ TrailRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -193,7 +197,7 @@ TrailRenderer:
   m_SortingLayerID: -959628281
   m_SortingLayer: 2
   m_SortingOrder: -3
-  m_Time: 0.15
+  m_Time: 0.2
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -202,8 +206,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0044555664
-        value: 0.56304073
+        time: 0
+        value: 0.75140285
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -211,8 +215,8 @@ TrailRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.95098877
-        value: 0.11956787
+        time: 0.9598999
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -264,21 +268,21 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!114 &1711502728583107614
+--- !u!114 &8435318956707353139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9190232622537269824}
+  m_GameObject: {fileID: 5824580121175052359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aca50630b19c3d48b972a2853a8a14a, type: 3}
+  m_Script: {fileID: 11500000, guid: 195135c8974ab9a488e8dc74b81cd13b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 1
-  maxDistance: 3
-  flyspeed: 10
+  maxDistance: 2.45
+  flySpeed: 13
   isFlying: 1
   isHaveUsedSkill: 0
   boomRadius: 2.5

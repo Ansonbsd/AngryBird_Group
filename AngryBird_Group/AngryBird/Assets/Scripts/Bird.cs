@@ -2,73 +2,74 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+<<<<<<< HEAD
 using UnityEngine.XR;
+=======
+>>>>>>> parent of ea85890 (æœ€æ–°ç‰ˆå‰31èŠ‚)
 
 public enum BirdState
 {
     Waiting,
-    Beforeshoot,
+    BeforeShoot,
     AfterShoot,
     WaitToDie
 }
 public class Bird : MonoBehaviour
 {
-    public BirdState state = BirdState.Beforeshoot;
-    // Start is called before the first frame update
+    public BirdState state = BirdState.BeforeShoot;
+    //µÈ´ı  ·¢ÉäÇ°  ·¢Éäºó
+
     private bool isMouseDown = false;
+    public float maxDistance = 2.45f;
 
-    public float maxDistance = 3.0f;
-
-    public float flyspeed = 10;//Ğ¡Äñ·ÉĞĞËÙ¶È
+    public float flySpeed = 13;
 
     protected Rigidbody2D rgd;
 
     public bool isFlying = true;
     public bool isHaveUsedSkill = false;
 
-    private Collider2D collider;
-
 
     void Start()
     {
         rgd = GetComponent<Rigidbody2D>();
         rgd.bodyType = RigidbodyType2D.Static;
-      
     }
 
     // Update is called once per frame
     void Update()
     {
         switch (state)
-        {   
-            
+        {
             case BirdState.Waiting:
                 WaitControl();
                 break;
-            case BirdState.Beforeshoot:
+            case BirdState.BeforeShoot:
                 MoveControl();
                 break;
             case BirdState.AfterShoot:
                 StopControl();
-                SkillControl();//¼¼ÄÜ¿ØÖÆ
+                SkillControl();
                 break;
             case BirdState.WaitToDie:
                 break;
             default:
                 break;
         }
-  
-    }
 
+    }
     private void WaitControl()
     {
 
     }
-    //OnMouseDownºÍOnMouseUp
 
     private void OnMouseDown()
     {
+<<<<<<< HEAD
         if (state == BirdState.Beforeshoot && EventSystem.current.IsPointerOverGameObject()==false)
+=======
+        if (state == BirdState.BeforeShoot && EventSystem.current.IsPointerOverGameObject() == false)
+>>>>>>> parent of ea85890 (æœ€æ–°ç‰ˆå‰31èŠ‚)
         {
             isMouseDown = true;
             Slingshot.Instance.StartDraw(transform);
@@ -78,7 +79,11 @@ public class Bird : MonoBehaviour
 
     private void OnMouseUp()
     {
+<<<<<<< HEAD
         if (state == BirdState.Beforeshoot && EventSystem.current.IsPointerOverGameObject() == false)
+=======
+        if (state == BirdState.BeforeShoot && EventSystem.current.IsPointerOverGameObject() == false)
+>>>>>>> parent of ea85890 (æœ€æ–°ç‰ˆå‰31èŠ‚)
         {
             isMouseDown = false;
             Slingshot.Instance.EndDraw();
@@ -97,41 +102,41 @@ public class Bird : MonoBehaviour
     private Vector3 GetMousePosition()
     {
         Vector3 centerPosition = Slingshot.Instance.getCenterPositon();
-        Vector3 mp= Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 mouseDir = mp - centerPosition;
+        Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mp.z = 0;
+        Vector3 mouseDir = mp - centerPosition;
 
-        float distance = mouseDir.magnitude;//Êó±êµãÓëÖĞĞÄµãµÄ¾àÀë
+        float distance = mouseDir.magnitude;
 
         if (distance > maxDistance)
         {
-            mp =mouseDir.normalized * maxDistance + centerPosition;//½«Êó±êÎ»ÖÃÏŞ¶¨ÔÚ·¶Î§ÄÚ
+            mp = mouseDir.normalized * maxDistance + centerPosition;
         }
+
         return mp;
     }
 
-    private void Fly()//¿ØÖÆĞ¡Äñ·ÉĞĞ
+    private void Fly()
     {
-        rgd.bodyType = RigidbodyType2D.Dynamic;//ÉèÖÃ¸ÕÌå
+        rgd.bodyType = RigidbodyType2D.Dynamic;
 
-        rgd.velocity = (Slingshot.Instance.getCenterPositon() - transform.position).normalized * flyspeed;//»ñÈ¡·½ÏòÏòÁ¿£¬³ËËÙ¶È´óĞ¡
-
-        state = BirdState.AfterShoot;//·É³öºóÊó±ê²»¿É¿ØÖÆ
+        rgd.velocity = (Slingshot.Instance.getCenterPositon() - transform.position).normalized * flySpeed;
+        state = BirdState.AfterShoot;
 
         AudioManager.Instance.PlayBirdFlying(transform.position);
     }
 
-    public void GoStage(Vector3 position)//¿ØÖÆĞ¡ÄñµÄÉÏ³¡×´Ì¬,²¢Ìá¹©Ğ¡ÄñÎ»ÖÃ
+    public void GoStage(Vector3 position)
     {
-        state = BirdState.Beforeshoot;
+        state = BirdState.BeforeShoot;
         transform.position = position;
     }
 
-    private void StopControl()//
+    private void StopControl()
     {
-        if (rgd.velocity.magnitude < 0.1f)//ÈôĞ¡ÄñËÙ¶ÈĞ¡ÓÚÒ»¶¨Öµ
+        if (rgd.velocity.magnitude < 0.1f)
         {
-            state = BirdState.WaitToDie;//¸Ä±äÏÖÔÚĞ¡Äñ×´Ì¬£¬×¼±¸Ïú»Ù
+            state = BirdState.WaitToDie;
             Invoke("LoadNextBird", 1f);
         }
     }
@@ -139,9 +144,11 @@ public class Bird : MonoBehaviour
     private void SkillControl()
     {
         if (isHaveUsedSkill) return;
-       
-        if (isFlying= true && Input.GetMouseButtonDown(0))
+
+
+        if (isFlying == true && Input.GetMouseButtonDown(0))
         {
+            isHaveUsedSkill = true;
             FlyingSkill();
         }
 
@@ -151,33 +158,31 @@ public class Bird : MonoBehaviour
             FullTimeSkill();
         }
     }
-
     protected virtual void FlyingSkill()
     {
-      
     }
-    
-    virtual protected void FullTimeSkill()
+    protected virtual void FullTimeSkill()
     {
-        
     }
-    protected void LoadNextBird()//¼ÓÔØÏÂÒ»Ö»Ğ¡Äñ
+
+    protected void LoadNextBird()
     {
-        Destroy(gameObject);//Ïú»ÙĞ¡Äñ
+        Destroy(gameObject);
         GameObject.Instantiate(Resources.Load("Boom1"), transform.position, Quaternion.identity);
         GameManager.Instance.LoadNextBird();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {   if (state == BirdState.AfterShoot)
+    {
+        if (state == BirdState.AfterShoot)
         {
             isFlying = false;
         }
-        
-        if (state == BirdState.AfterShoot && collision.relativeVelocity.magnitude > 5)//²¥·ÅÌõ¼ş£ºÕıÔÚ·ÉĞĞ£¬ËÙ¶È´óÓÚ5
-        
+
+        if (state == BirdState.AfterShoot && collision.relativeVelocity.magnitude > 5)
         {
             AudioManager.Instance.PlayBirdCollision(transform.position);
         }
     }
 }
+

@@ -22,8 +22,7 @@ public class FollowTarget : MonoBehaviour
             Vector3 position = transform.position;
             position.x = target.position.x;
 
-            position.x = Mathf.Clamp(position.x,3,10);
-            
+            position.x = Mathf.Clamp(position.x,-15,7);
 
             transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime*smoothSpeed);
         }
