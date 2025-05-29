@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using UnityEngine.XR;
+=======
+>>>>>>> parent of ea85890 (最新版前31节)
 =======
 >>>>>>> parent of ea85890 (最新版前31节)
 
@@ -66,7 +69,11 @@ public class Bird : MonoBehaviour
     private void OnMouseDown()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (state == BirdState.Beforeshoot && EventSystem.current.IsPointerOverGameObject()==false)
+=======
+        if (state == BirdState.BeforeShoot && EventSystem.current.IsPointerOverGameObject() == false)
+>>>>>>> parent of ea85890 (最新版前31节)
 =======
         if (state == BirdState.BeforeShoot && EventSystem.current.IsPointerOverGameObject() == false)
 >>>>>>> parent of ea85890 (最新版前31节)
@@ -80,7 +87,11 @@ public class Bird : MonoBehaviour
     private void OnMouseUp()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (state == BirdState.Beforeshoot && EventSystem.current.IsPointerOverGameObject() == false)
+=======
+        if (state == BirdState.BeforeShoot && EventSystem.current.IsPointerOverGameObject() == false)
+>>>>>>> parent of ea85890 (最新版前31节)
 =======
         if (state == BirdState.BeforeShoot && EventSystem.current.IsPointerOverGameObject() == false)
 >>>>>>> parent of ea85890 (最新版前31节)

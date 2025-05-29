@@ -1,0 +1,665 @@
+fileFormatVersion: 2
+guid: e20d9f5726a13db4fb9ffc3660a5ec37
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 239
+        width: 158
+        height: 508
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c05104e7285fc4692fa0d3ee0f391c
+      internalID: -2094995309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 239
+        width: 158
+        height: 508
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c93db1a2328b2a49984f3c7b3cf25ab
+      internalID: -2054169049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_2
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 239
+        width: 158
+        height: 508
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315f66e72cddf2240b43125a575d7e4a
+      internalID: 748754424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_3
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 243
+        width: 155
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342e5f4c45f886f4fb46a8b88fa7e483
+      internalID: -340575248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_4
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 243
+        width: 155
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7aee4ea9513f54b85ae3dc930d250e
+      internalID: 1892066936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_5
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 243
+        width: 155
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f2992029502ee46bf19b184590b714
+      internalID: 718150902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelUnlock
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 121
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118461e4360b03541b864db155c2a5f1
+      internalID: 817326206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_7
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 181
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae1c624c3b346245a6cf676e99273d0
+      internalID: -1720267430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_8
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 226
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99cdc05a6b914ec4b91430f7648c3eeb
+      internalID: 1378292378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_9
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 6
+        width: 115
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d88db3d7551454a9b8fb6472f0bae3
+      internalID: -1159623871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_10
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 125
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b72085a07ff197408c9407c900599b8
+      internalID: -1976635895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star2
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 203
+        width: 96
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb8396a31279f94fb5125c11f017dab
+      internalID: -880123121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_12
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 221
+        width: 42
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b6d7828c7d4454087e96aeced85085
+      internalID: -1095048532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_13
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 1
+        width: 293
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3c6b5404fc2e24ca0e8ede865b3c2a
+      internalID: -1569775928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_14
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e314f74a76b2d4f40affd65e33ab5113
+      internalID: -275339206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_15
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 123
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07bc08bebb4cbb40ab92428d852ad50
+      internalID: 702452273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star1
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 166
+        width: 97
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8224e364fbfe8d4eb9a8a1e17516aa2
+      internalID: 1432195685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star0
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 131
+        width: 98
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad09079e82fdf4a4b9be5c01a3486bcd
+      internalID: -858283025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LevelLock
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f910fda3d28d594a8f967a1f9b2ddab
+      internalID: 1330167609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 81
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b4621c6fe206747ae67857b2f4639c
+      internalID: -64982495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_23
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 48
+        width: 125
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ed7d84050fe6749a7df8ab5db42087
+      internalID: 642775937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_24
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 60
+        width: 46
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530d91eaf040b6d49bc71f4a4f57054e
+      internalID: -1663978137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_25
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 49
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c35213f8fc25341bdd14932f67f463
+      internalID: -19862491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star3
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 8
+        width: 98
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432854f6929c40445ba863b7ef32837d
+      internalID: 1951431058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MENU_LEVELSELECTION_1_27
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 15
+        width: 55
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16504f471596ba4abbbf3eca69da77a
+      internalID: 596049105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ae053170ff340be47871b5cca50efdd0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      LevelLock: 1330167609
+      LevelUnlock: 817326206
+      MENU_LEVELSELECTION_1_0: -2094995309
+      MENU_LEVELSELECTION_1_1: -2054169049
+      MENU_LEVELSELECTION_1_10: -1976635895
+      MENU_LEVELSELECTION_1_12: -1095048532
+      MENU_LEVELSELECTION_1_13: -1569775928
+      MENU_LEVELSELECTION_1_14: -275339206
+      MENU_LEVELSELECTION_1_15: 702452273
+      MENU_LEVELSELECTION_1_17: 969800257
+      MENU_LEVELSELECTION_1_19: 475598804
+      MENU_LEVELSELECTION_1_2: 748754424
+      MENU_LEVELSELECTION_1_20: -1518518966
+      MENU_LEVELSELECTION_1_23: 642775937
+      MENU_LEVELSELECTION_1_24: -1663978137
+      MENU_LEVELSELECTION_1_25: -19862491
+      MENU_LEVELSELECTION_1_27: 596049105
+      MENU_LEVELSELECTION_1_3: -340575248
+      MENU_LEVELSELECTION_1_4: 1892066936
+      MENU_LEVELSELECTION_1_5: 718150902
+      MENU_LEVELSELECTION_1_7: -1720267430
+      MENU_LEVELSELECTION_1_8: 1378292378
+      MENU_LEVELSELECTION_1_9: -1159623871
+      Star: -64982495
+      Star0: -858283025
+      Star1: 1432195685
+      Star2: -880123121
+      Star3: 1951431058
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:AngryBird_Group/AngryBird/Assets/Prefabs/UI.meta
 guid: 60939f159efaab2429290b6168f67eb5
+========
+guid: 05e67f197fbaadd4cb81b221fd6c6778
+>>>>>>>> parent of ea85890 (最新版前31节):AngryBird_Group/AngryBird/Assets/Resources/Prefabs.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
